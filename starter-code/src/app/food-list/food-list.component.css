@@ -57,3 +57,18 @@ img {
 input {
     max-width: 150px
 }
+
+button {
+    margin-top: 20px
+}
+
+.row-daily {
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+

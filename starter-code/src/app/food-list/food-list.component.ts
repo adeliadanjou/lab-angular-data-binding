@@ -11,15 +11,16 @@ export class FoodListComponent implements OnInit {
   foods: Object[] = foods;
   foodSearch: string = "";
   isForm: boolean = false;
-  newFood: any = {}
-  constructor() { }
+  newFood: any = {};
+  todaysFoods: Array<any> = []
+
+  constructor() {};
 
   ngOnInit() {
   }
 
   toggleForm = () => {
     return this.isForm = !this.isForm
-
   }
 
   addFood = (newFood) => {
@@ -32,6 +33,10 @@ export class FoodListComponent implements OnInit {
       console.log("Los campos no pueden estar vacios")
     }
    
+  }
+
+  addTodaysFood(food){
+   this.todaysFoods.push(food)
   }
 
 }

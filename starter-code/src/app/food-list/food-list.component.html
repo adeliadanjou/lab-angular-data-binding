@@ -1,8 +1,7 @@
 
 <div class="add-food">
     <button type="button" class="btn btn-warning" (click)="toggleForm()">ADD NEW FOOD</button>
-
-
+ 
 
     <div class="formDiv" *ngIf="isForm">
 
@@ -43,7 +42,24 @@
     <img src="{{food.image}}" alt="{{food.name}}">
     <h2>{{food.name}}</h2>
     <p>{{food.calories}}</p>
-    <p>{{food.hello}}</p>
+    <!-- <input type="number" value="1" > -->
+    <button type="button" class="btn btn-info" (click)="addTodaysFood(food)">Add Today's Food</button>
   </div>
+   
+
+<div class="row-daily">
+
+  <h1>DAILY FOODS</h1>
+  
+  <div class="daily food-card" *ngFor = "let  todaysFood of  todaysFoods; let i = index">
+    <img src="{{todaysFood.image}}" alt="{{todaysFood.name}}">
+    <h2>{{todaysFood.name}}</h2>
+    <p>{{todaysFood.calories}}</p>
+  </div>
+
+
+</div>
+
+
 
 </div>
