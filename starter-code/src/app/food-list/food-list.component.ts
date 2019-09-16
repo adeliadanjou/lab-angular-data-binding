@@ -11,7 +11,7 @@ export class FoodListComponent implements OnInit {
   foods: Object[] = foods;
   foodSearch: string = "";
   isForm: boolean = false;
-
+  newFood: any = {}
   constructor() { }
 
   ngOnInit() {
@@ -23,7 +23,15 @@ export class FoodListComponent implements OnInit {
   }
 
   addFood = (newFood) => {
-   foods.push
+
+    if(this.newFood.name !== undefined && this.newFood.calories !== undefined && this.newFood.image !== undefined  ) {
+      this.foods.push(this.newFood);
+      this.isForm = false;
+    }
+    else {
+      console.log("Los campos no pueden estar vacios")
+    }
+   
   }
 
 }
