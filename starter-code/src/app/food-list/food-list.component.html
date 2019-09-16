@@ -42,8 +42,8 @@
     <img src="{{food.image}}" alt="{{food.name}}">
     <h2>{{food.name}}</h2>
     <p>{{food.calories}}</p>
-    <!-- <input type="number" value="1" > -->
-    <button type="button" class="btn btn-info" (click)="addTodaysFood(food)">Add Today's Food</button>
+    <input type="number" value="1" #quantity  >
+    <button type="button" class="btn btn-info" (click)="addTodaysFood(food,quantity)">Add Today's Food</button>
   </div>
    
 
@@ -51,10 +51,9 @@
 
   <h1>DAILY FOODS</h1>
   
-  <div class="daily food-card" *ngFor = "let  todaysFood of  todaysFoods; let i = index">
-    <img src="{{todaysFood.image}}" alt="{{todaysFood.name}}">
-    <h2>{{todaysFood.name}}</h2>
-    <p>{{todaysFood.calories}}</p>
+  <div  *ngFor = "let  todaysFood of  todaysFoods; let i = index">
+
+  <p> {{todaysFood.name}} x {{todaysFood.quantity}}</p>
   </div>
 
 

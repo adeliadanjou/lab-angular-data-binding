@@ -35,8 +35,19 @@ export class FoodListComponent implements OnInit {
    
   }
 
-  addTodaysFood(food){
-   this.todaysFoods.push(food)
+  addTodaysFood(food,quantity){
+
+    food.quantity = quantity.value
+
+  //   console.log(food)
+  //  this.todaysFoods.push(food)
+   if(this.todaysFoods.indexOf(food) === -1){
+     this.todaysFoods.push(food)
+   }
+   else {
+     this.todaysFoods[this.todaysFoods.indexOf(food)].quantity = quantity.value 
+   }
+
   }
 
 }
