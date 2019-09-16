@@ -23,3 +23,37 @@ img {
     height: 100px;
 }
 
+.search-div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0
+}
+
+.search-label {
+    margin: 0 10px
+}
+
+.add-food {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-items: center
+}
+
+.formDiv {
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+}
+
+.add-submit {
+    align-self: center;
+    margin-top: 20px
+}
+
+input {
+    max-width: 150px
+}

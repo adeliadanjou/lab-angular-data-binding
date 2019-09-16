@@ -1,7 +1,41 @@
 
-<label for="search">Search your food:</label>
-<input type="text" placeholder="Pizza" name="search" [(ngModel)]="foodSearch">
+<div class="add-food">
+    <button type="button" class="btn btn-warning" (click)="toggleForm()">ADD NEW FOOD</button>
 
+
+
+    <div class="formDiv" *ngIf="isForm">
+
+    <div>
+      <label for="">Name:</label>
+      <input type="text" />
+
+    </div>
+    
+    <div>
+
+      <label for="">Calories:</label>
+      <input type="text" />
+    </div>
+    
+    <div>
+      <label for="">Image URL:</label>
+      <input type="text" />
+
+    </div>
+    
+      <input class="add-submit btn btn-danger" type="submit" (click)="addFood()" >
+    </div>
+</div>
+
+
+<div class="search-div">
+    
+    <label class="search-label" for="search">Search your Food: </label>
+    <input type="text" placeholder="Pizza" name="search" [(ngModel)]="foodSearch">
+
+
+</div>
 
 <div class="foods-div">
 

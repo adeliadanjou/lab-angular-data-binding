@@ -10,10 +10,20 @@ export class FoodListComponent implements OnInit {
 
   foods: Object[] = foods;
   foodSearch: string = "";
+  isForm: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleForm = () => {
+    return this.isForm = !this.isForm
+
+  }
+
+  addFood = (newFood) => {
+   foods.push
   }
 
 }
